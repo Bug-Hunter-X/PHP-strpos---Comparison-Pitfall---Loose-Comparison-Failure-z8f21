@@ -1,0 +1,1 @@
+This code suffers from a subtle issue related to how PHP handles type juggling and comparisons.  The `strpos()` function returns `false` if the needle is not found, and `0` if it's found at the beginning of the haystack. Since `false` is loosely equivalent to `0` in PHP, a simple `!==` check might fail to detect the absence of the substring.
